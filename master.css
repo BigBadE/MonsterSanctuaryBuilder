@@ -1,0 +1,65 @@
+@import url(styles/teams.css);
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.fill {
+    height: 100%;
+}
+
+.bordered {
+    border-style: solid;
+    border-image: url(assets/background.png) 7/2;
+    border-width: 10px;
+    background-color: rgba(53, 68, 85, 230);
+    image-rendering: pixelated;
+}
+
+.marginless {
+    margin: 0;
+    padding: 0;
+}
+
+.element {
+    border-style: solid;
+    border-image: url(assets/element_background.png) 5 fill;
+    border-width: 4px;
+}
+
+@keyframes select-border {
+    0% { border-image-outset: 1 }
+    100% { border-image-outset: 1.4 }
+}
+
+.element:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border: 10px solid transparent;
+    border-image: none;
+    margin: 0;
+}
+
+.element:hover:before {
+    border-image: url(assets/selection_arrow.png) 7/2/1.2;
+    animation-name: select-border;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: .2s;
+}
+
+p {
+    font-family: 'PixelMplus', serif;
+    color: white;
+    font-size: 32px;
+    text-shadow: 2px 0 #000000, 0 2px #000000;
+}
+
+@font-face {
+    font-family: 'PixelMplus';
+    src: url('assets/PixelMplus10-Regular.ttf');
+}

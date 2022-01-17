@@ -1,0 +1,17 @@
+.team {
+    height: 10%;
+    width: 100%;
+}
+
+.selected {
+    border-style: solid;
+    border-image: url(../assets/selection_arrow.png) 7;
+    margin: 0;
+}
+
+.monster-preview {
+    height: 40%;
+
+    object-fit: cover;
+    object-position: 50% 30%;
+}
